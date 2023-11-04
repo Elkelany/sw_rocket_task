@@ -6,8 +6,8 @@ class LaunchesUseCases {
 
   LaunchesRepository repository;
 
-  Launch getNextLaunch() {
-    Launch nextLaunch = repository.getNextLaunch();
+  Future<Launch> getNextLaunch() async {
+    Launch nextLaunch = await repository.getNextLaunch();
 
     return nextLaunch;
   }
